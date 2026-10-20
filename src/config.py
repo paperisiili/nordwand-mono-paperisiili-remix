@@ -7,7 +7,7 @@ from utils.bounds import BodyBounds
 class FontConfig:
     """Default metrics used for the project, can be overwritten with a yaml file"""
 
-    family_name: str = "Nordwand Mono"
+    family_name: str = "Nordwand Mono Paperisiili Remix"
 
     units_per_em: int = 1000
     window_ascent: int = 1025
