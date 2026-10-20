@@ -7,12 +7,13 @@ class ApostropheMarkGlyph(Glyph):
     unicode = "0x27"
     offset = 0
     width_ratio = 1
-    height_ratio = 0.7
+    stroke_ratio = 1.08
+    height_ratio = 0.67
 
     def draw(self, pen, dc):
         b = dc.body_bounds(
             offset=self.offset, height="x_height", width_ratio=self.width_ratio
         )
         h = self.height_ratio * b.height
-        s = dc.stroke_x
+        s = dc.stroke_x * self.stroke_ratio
         draw_rect(pen, b.xmid - s / 2, dc.ascent - h, b.xmid + s / 2, dc.ascent)
