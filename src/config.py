@@ -10,8 +10,8 @@ class FontConfig:
     family_name: str = "Nordwand Mono Paperisiili Remix"
 
     units_per_em: int = 1000
-    window_ascent: int = 1025
-    window_descent: int = -292
+    window_ascent: int = 1017
+    window_descent: int = -300
     window_width: int = 600
 
     ascent: int = 750
