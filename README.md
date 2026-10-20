@@ -12,3 +12,4 @@ Remix differences:
 - A little thicker curly braces, with slightly less peak
 - A little thicker angle braces
 - A little cleaner ampersand
+- A lot bigger caret

@@ -9,9 +9,13 @@ class Circumflex(Accent):
     width = 1
     stroke_ratio = 1.1
 
-    def draw_at(self, pen, dc, x, y):
-        h = self.height * dc.x_height
-        w = self.width * dc.width
+    def draw(self, pen, dc):
+        b = dc.body_bounds(offset=self.offset)
+        self.draw_at(pen, dc, x=b.xmid, y=b.y2, x_scale=1.3, y_scale=1.8)
+
+    def draw_at(self, pen, dc, x, y, x_scale=1, y_scale=1):
+        h = self.height * dc.x_height * y_scale
+        w = self.width * dc.width * x_scale
         x1, x2, xmid = x - w / 2, x + w / 2, x
         y1, y2 = y - h / 2, y + h / 2
         d = self.diag_stroke_dampening(self.stroke_ratio, dc.stroke_x, coef=0.45)
