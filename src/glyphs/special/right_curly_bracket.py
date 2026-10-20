@@ -43,7 +43,7 @@ class RightCurlyBracketGlyph(Glyph):
             xmid - sx / 2,
             y2 - l4,
             x2,
-            ymid - 0.25 * sx,
+            ymid - 0.25 * sp,
             hx,
             hy,
             orientation="bottom-right",
@@ -66,11 +66,11 @@ class RightCurlyBracketGlyph(Glyph):
             xmid - sx / 2,
             y1 + l4,
             x2,
-            ymid + 0.25 * sx,
+            ymid + 0.25 * sp,
             hx,
             hy,
             orientation="top-right",
         )
 
 
-        draw_rect(pen, b.xmid, ymid - sx / 2, b.x2, ymid + sx / 2)
+        draw_rect(pen, b.xmid, ymid - sp / 2, b.x2, ymid + sp / 2)
