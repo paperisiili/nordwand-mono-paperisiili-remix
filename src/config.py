@@ -32,7 +32,7 @@ class FontConfig:
 
     italic_angle: float = 9.4
 
-    width: int = 360
+    width: int = 353
 
     hx: int = 180
     hy: int = 240
