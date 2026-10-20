@@ -10,3 +10,4 @@ Remix differences:
 - A tiny bit lower line height
 - Wider parentheses
 - A little thicker curly braces, with slightly less peak
+- A little thicker angle braces
