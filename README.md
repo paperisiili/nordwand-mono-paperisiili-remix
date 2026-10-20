@@ -8,3 +8,4 @@ Remix differences:
 - A little narrower glyphs
 - A little narrower `_`, `-`, `=` etc. so gaps between them show
 - A tiny bit lower line height
+- Wider parentheses

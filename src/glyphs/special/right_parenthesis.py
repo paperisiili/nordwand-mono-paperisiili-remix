@@ -6,7 +6,7 @@ class RightParenthesisGlyph(Glyph):
     name = "right_parenthesis"
     unicode = "0x29"
     offset = 0
-    width_ratio = 0.4
+    width_ratio = 0.68
     stroke_x_ratio = 1.1
 
     def draw(self, pen, dc):
@@ -23,7 +23,7 @@ class RightParenthesisGlyph(Glyph):
             ymid - dc.parenthesis_length / 2,
             b.x2,
             ymid + dc.parenthesis_length / 2,
-            b.hx * 2,
-            b.hy * dc.parenthesis_length / b.height,
+            b.hx * 1.9,
+            b.hy * dc.parenthesis_length / b.height * 0.9,
             cut="left",
         )
