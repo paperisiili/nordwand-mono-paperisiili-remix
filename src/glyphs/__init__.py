@@ -4,6 +4,7 @@ from config import FontConfig as fc
 
 class Glyph(ABC):
     accent_x_offset: int = 0
+    side_offset = 0.1
 
     @property
     @abstractmethod

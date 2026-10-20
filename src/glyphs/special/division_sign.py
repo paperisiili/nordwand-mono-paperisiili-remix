@@ -6,7 +6,7 @@ class DivisionSignGlyph(Glyph):
     name = "division_sign"
     unicode = "0xF7"
     offset = 0
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     width_ratio = 1.0
     stroke_ratio = 0.92
     gap_ratio = 0.2

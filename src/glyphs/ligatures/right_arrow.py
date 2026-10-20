@@ -1,4 +1,4 @@
-from glyphs import LigatureGlyph
+from glyphs import Glyph, LigatureGlyph
 from draw.parallelogramm import draw_parallelogramm
 from draw.rect import draw_rect
 
@@ -15,7 +15,7 @@ class RightArrowGlyph(LigatureGlyph):
     number_characters = 2
     width_ratio = 0.88
     overlap = 0.6
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     span = 0.85
     gap = 0.0
     stroke_ratio = 1.2

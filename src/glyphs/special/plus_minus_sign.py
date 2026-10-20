@@ -7,7 +7,7 @@ class PlusMinusSignGlyph(Glyph):
     unicode = "0xB1"
     offset = 0
     width_ratio = 1
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     stroke_ratio = 0.92
 
     def draw(self, pen, dc):

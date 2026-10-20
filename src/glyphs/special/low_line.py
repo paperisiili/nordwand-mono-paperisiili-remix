@@ -6,7 +6,7 @@ class LowLineGlyph(Glyph):
     name = "low_line"
     unicode = "0x5F"
     offset = 0
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     stroke_ratio = 0.92
     width_ratio = 1
 

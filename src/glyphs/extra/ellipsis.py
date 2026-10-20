@@ -8,7 +8,7 @@ class EllipsisGlyph(Glyph):
     offset = 0
     width = 440
     stroke_ratio = 1.5
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     max_stroke = 130
 
     def draw(self, pen, dc):

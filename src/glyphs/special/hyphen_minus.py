@@ -6,7 +6,7 @@ class HyphenMinusGlyph(Glyph):
     name = "hyphen_minus"
     unicode = "0x2D"
     offset = 0
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     width_ratio = 1
     stroke_ratio = 0.92
 

@@ -6,7 +6,7 @@ class EqualsSignGlyph(Glyph):
     name = "equals_sign"
     unicode = "0x3D"
     offset = 0
-    side_offset = 0.05
+    side_offset = Glyph.side_offset
     width_ratio = 1
     gap = 0.4
     stroke_ratio = 0.92
