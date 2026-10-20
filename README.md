@@ -9,3 +9,4 @@ Remix differences:
 - A little narrower `_`, `-`, `=` etc. so gaps between them show
 - A tiny bit lower line height
 - Wider parentheses
+- A little thicker curly braces, with slightly less peak

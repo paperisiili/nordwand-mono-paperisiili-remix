@@ -9,7 +9,8 @@ class LeftCurlyBracketGlyph(Glyph):
     unicode = "0x7B"
     offset = 0
     width_ratio = 1
-    peak_ratio = 0.35
+    stroke_x_ratio = 1.05
+    peak_ratio = 0.3
     protusion_stroke_ratio = 1.3
 
     def draw(self, pen, dc):
@@ -18,7 +19,7 @@ class LeftCurlyBracketGlyph(Glyph):
         )
         pl = self.peak_ratio * b.width
         ymid = dc.parenthesis
-        sx, sy = dc.stroke_x, dc.stroke_y
+        sx, sy = dc.stroke_x * self.stroke_x_ratio, dc.stroke_y
         sp = dc.stroke_y * self.protusion_stroke_ratio
         y1, y2 = ymid - dc.parenthesis_length / 2, ymid + dc.parenthesis_length / 2
         x1, x2, xmid = b.x1 + pl, b.x2, (b.x1 + pl + b.x2) / 2
@@ -34,8 +35,6 @@ class LeftCurlyBracketGlyph(Glyph):
             y2 - l4,
             x2,
             y2,
-            # hx,
-            # hy,
             orientation="top-right",
         )
         draw_corner(
@@ -59,8 +58,6 @@ class LeftCurlyBracketGlyph(Glyph):
             y1 + l4,
             x2,
             y1,
-            # hx,
-            # hy,
             orientation="bottom-right",
         )
         draw_corner(
