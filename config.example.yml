@@ -56,10 +56,10 @@ taper: 0.35
 # --- Stroke weights (regular / 400) -----------------------------------------
 # These are the base weights; --config keeps the multi-weight build, which
 # scales them per weight via DrawConfig.weight().
-default_stroke: 84
-stroke_x: 84
-stroke_y: 70
-stroke_alt: 66
+default_stroke: 90
+stroke_x: 90
+stroke_y: 75
+stroke_alt: 71
 
 # --- Overshoots -------------------------------------------------------------
 v_overshoot: 9

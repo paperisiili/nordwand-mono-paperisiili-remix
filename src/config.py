@@ -42,10 +42,10 @@ class FontConfig:
 
     taper: float = 0.35
 
-    default_stroke = 84
-    stroke_x: int = 84
-    stroke_y: int = 70
-    stroke_alt: int = 66
+    default_stroke = 90
+    stroke_x: int = 90
+    stroke_y: int = 75
+    stroke_alt: int = 71
 
     v_overshoot: int = 9
     v_overshoot_cap: int = 16
@@ -80,7 +80,7 @@ class DrawConfig(FontConfig):
         """Return a DrawConfig with heavier stroke weights for a bold variant."""
         from math import log, exp
 
-        brx = 1.6
+        brx = 1.5
         ratio_x = exp((w - 400) * log(brx) / 300)
 
         bry = 1.5
