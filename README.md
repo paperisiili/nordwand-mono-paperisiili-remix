@@ -11,3 +11,4 @@ Remix differences:
 - Wider parentheses
 - A little thicker curly braces, with slightly less peak
 - A little thicker angle braces
+- A little cleaner ampersand

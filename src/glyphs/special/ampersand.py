@@ -21,7 +21,7 @@ class AmpersandGlyph(Glyph):
     hook_ratio = 0.12
     hook_below_baseline = 0
     hook_outside_cell = 0.24
-    end_height_ratio = 0.5
+    end_height_ratio = 0.4
 
     def draw(self, pen, dc):
         b = dc.body_bounds(
