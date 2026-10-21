@@ -7,11 +7,11 @@ class CommaGlyph(Glyph):
     unicode = "0x2C"
     offset = 0
     width_ratio = 1
-    height_ratio = 0.75
+    height_ratio = 0.85
     vertical_offset = 0.25
-    foot_offset = 0.15
-    taper = 0.66
-    stroke_ratio = 1.2
+    foot_offset = 0.14
+    taper = 0.2
+    stroke_ratio = 1.55
 
     def draw(self, pen, dc):
         b = dc.body_bounds(

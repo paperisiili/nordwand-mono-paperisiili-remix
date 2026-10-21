@@ -13,7 +13,7 @@ class RightArrowGlyph(Glyph):
     overlap = 0.6
     span = 0.65
     arrow_width = 0.66
-    stroke_ratio = 1.2
+    stroke_ratio = 1.28
 
     def draw(self, pen, dc):
         b = dc.body_bounds(

@@ -8,9 +8,9 @@ class ExclamationMarkGlyph(Glyph):
     unicode = "0x21"
     offset = 0
     width_ratio = 1
-    gap = 0.35
+    gap = 0.38
     height_overflow = 0.05
-    stroke_ratio = 1
+    stroke_ratio = 1.17
     taper_length = 0.25
     taper = 0.75
 
@@ -27,9 +27,9 @@ class ExclamationMarkGlyph(Glyph):
 
         draw_rect(
             pen,
-            b.xmid - dc.stroke_x / 2,
+            b.xmid - sx / 2,
             b.y1 + g + h * self.taper_length,
-            b.xmid + dc.stroke_x / 2,
+            b.xmid + sx / 2,
             b.y2 + dh,
         )
         draw_polygon(

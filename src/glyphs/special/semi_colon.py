@@ -8,7 +8,7 @@ class SemiColonGlyph(Glyph):
     unicode = "0x3B"
     offset = 0
     width_ratio = 1
-    stroke_ratio = 1.5
+    stroke_ratio = 1.6
     gap = 1
 
     def draw(self, pen, dc):

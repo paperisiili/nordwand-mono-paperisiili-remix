@@ -7,7 +7,7 @@ class HyphenMinusGlyph(InfiniteLigatureGlyph):
     offset = 0
     side_offset = Glyph.side_offset
     width_ratio = 1
-    stroke_ratio = 0.92
+    stroke_ratio = 1
 
     def horizontal_bar_heights(self, dc):
         return (dc.math,)

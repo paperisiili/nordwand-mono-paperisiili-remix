@@ -8,7 +8,7 @@ class PlusSignGlyph(Glyph):
     offset = 0
     width_ratio = 1
     side_offset = Glyph.side_offset
-    stroke_ratio = 0.92
+    stroke_ratio = 1
 
     def draw(self, pen, dc):
         b = dc.body_bounds(
@@ -17,7 +17,7 @@ class PlusSignGlyph(Glyph):
         s = dc.stroke_x * self.stroke_ratio
         so = self.side_offset * dc.window_width
         x1, x2 = so, dc.window_width - so
-        w = (x2 - x1)
+        w = (x2 - x1) * 1.12
 
         draw_rect(pen, x1, dc.math - s / 2, x2, dc.math + s / 2)
         draw_rect(

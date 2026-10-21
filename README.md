@@ -17,3 +17,5 @@ Remix differences:
 - A lot bigger caret
 - A little more solid quotes
 - Wide angle brackets by default
+- A thicker `|`, `¦`, `→`, `+`, `-`, `=`, `/`, `\`, `.`, `,`, `;`, `:`, `!`, `%`, `` ` ``
+- Longer `,`, `` ` ``

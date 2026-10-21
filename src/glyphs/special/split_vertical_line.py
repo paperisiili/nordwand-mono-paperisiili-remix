@@ -7,6 +7,7 @@ class SplitVerticalLineGlyph(Glyph):
     unicode = "0xA6"
     offset = 0
     width_ratio = 1
+    stroke_ratio = 1.15
     gap_ratio = 0.33
 
     def draw(self, pen, dc):
@@ -14,12 +15,13 @@ class SplitVerticalLineGlyph(Glyph):
             offset=self.offset, height="ascent", width_ratio=self.width_ratio
         )
         ymid = dc.parenthesis
+        stroke_x = dc.stroke_x * self.stroke_ratio
         y1, y2 = ymid - dc.parenthesis_length / 2, ymid + dc.parenthesis_length / 2
         g = self.gap_ratio * b.height
 
         draw_rect(
-            pen, b.xmid - dc.stroke_x / 2, y1, b.xmid + dc.stroke_x / 2, ymid - g / 2
+            pen, b.xmid - stroke_x / 2, y1, b.xmid + stroke_x / 2, ymid - g / 2
         )
         draw_rect(
-            pen, b.xmid - dc.stroke_x / 2, ymid + g / 2, b.xmid + dc.stroke_x / 2, y2
+            pen, b.xmid - stroke_x / 2, ymid + g / 2, b.xmid + stroke_x / 2, y2
         )

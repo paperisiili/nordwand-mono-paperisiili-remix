@@ -8,6 +8,7 @@ class ReverseSolidusGlyph(Glyph):
     offset = 0
     width_ratio = 1
     height_ratio = 0.85
+    stroke_ratio = 1.1
 
     def draw(self, pen, dc):
         b = dc.body_bounds(
@@ -17,8 +18,8 @@ class ReverseSolidusGlyph(Glyph):
         h = self.height_ratio * dc.parenthesis_length
         draw_parallelogramm(
             pen,
-            dc.stroke_x,
-            dc.stroke_y,
+            dc.stroke_x * self.stroke_ratio,
+            dc.stroke_y * self.stroke_ratio,
             b.x2,
             ymid - h / 2,
             b.x1,
