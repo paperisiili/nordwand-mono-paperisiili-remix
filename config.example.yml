@@ -36,7 +36,7 @@ parenthesis_length: 1060
 
 # --- Side bearings ----------------------------------------------------------
 min_margin_lowercase: 26
-min_margin_uppercase: 32.5
+min_margin_uppercase: 38
 
 # --- Italic -----------------------------------------------------------------
 italic_angle: 9.4

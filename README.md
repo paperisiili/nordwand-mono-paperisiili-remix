@@ -5,13 +5,14 @@ Upstream: https://github.com/tywr/Nordwand-Mono
 Remix differences:
 
 - A little thicker stroke in Regular and weights below it
-- A little less bold Bold
 - A little narrower glyphs
-- A little narrower `_`, `-`, `=` etc. so gaps between them show
+- A little less bold Bold
+- A little narrower `_`, `=` etc.
+- Wider `-` to match `_`
 - A tiny bit lower line height
 - Wider parentheses
 - A little thicker curly braces, with slightly less peak
-- A little thicker angle braces
+- A little thicker angle braces in the wide variant
 - A little cleaner ampersand
 - A lot bigger caret
 - A little more solid quotes
