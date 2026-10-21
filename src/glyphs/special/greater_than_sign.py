@@ -8,8 +8,8 @@ class GreaterThanSignGlyph(Glyph):
     offset = 0
     width_ratio = 1
     overlap = 0.6
-    span = 0.50
-    stroke_ratio = 1.5
+    span = 0.85
+    stroke_ratio = 1.28
 
     def draw(self, pen, dc):
         b = dc.body_bounds(

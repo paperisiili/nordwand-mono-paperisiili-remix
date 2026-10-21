@@ -12,7 +12,8 @@ Remix differences:
 - A tiny bit lower line height
 - Wider parentheses
 - A little thicker curly braces, with slightly less peak
-- A little thicker angle braces in the wide variant
+- A little thicker angle brackets in the wide variant
 - A little cleaner ampersand
 - A lot bigger caret
 - A little more solid quotes
+- Wide angle brackets by default
