@@ -4,9 +4,8 @@ Upstream: https://github.com/tywr/Nordwand-Mono
 
 Remix differences:
 
-- A little thicker stroke in Regular and weights below it
+- A little thicker stroke, except in Bold
 - A little narrower glyphs
-- A little less bold Bold
 - A little narrower `_`, `=` etc.
 - Wider `-` to match `_`
 - A tiny bit lower line height

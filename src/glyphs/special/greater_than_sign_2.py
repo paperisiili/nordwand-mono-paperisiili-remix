@@ -6,4 +6,4 @@ class GreaterThanSign2Glyph(GreaterThanSignGlyph):
     font_feature = {"ss03": 1}
     alternative_character_comment = "Also changes the `->` and `=>` arrows"
     span = 0.50
-    stroke_ratio = 1.2
+    stroke_ratio = 1.45

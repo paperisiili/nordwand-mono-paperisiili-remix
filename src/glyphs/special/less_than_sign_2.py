@@ -6,4 +6,4 @@ class LessThanSign2Glyph(LessThanSignGlyph):
     name = "less_than_sign_2"
     font_feature = {"ss03": 1}
     span = GreaterThanSign2Glyph.span
-    stroke_ratio = 1.2
+    stroke_ratio = 1.45

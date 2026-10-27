@@ -42,3 +42,8 @@ class Circumflex(Accent):
             direction="top-left",
             delta=d,
         )
+
+
+class ModifierCircumflex(Circumflex):
+    name = "modifier_circumflex"
+    unicode = "0x2C6"
