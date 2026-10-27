@@ -18,3 +18,4 @@ Remix differences:
 - Wide angle brackets by default
 - A thicker `|`, `¦`, `→`, `+`, `-`, `=`, `/`, `\`, `.`, `,`, `;`, `:`, `!`, `%`, `` ` ``
 - Longer `,`, `` ` ``
+- A little bolder bold lowercase `m`
