@@ -19,3 +19,4 @@ Remix differences:
 - A thicker `|`, `¦`, `→`, `+`, `-`, `=`, `/`, `\`, `.`, `,`, `;`, `:`, `!`, `%`, `` ` ``
 - Longer `,`, `` ` ``
 - A little bolder bold lowercase `m`
+- A taller `→`

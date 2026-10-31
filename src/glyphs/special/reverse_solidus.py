@@ -18,11 +18,10 @@ class ReverseSolidusGlyph(Glyph):
         h = self.height_ratio * dc.parenthesis_length
         draw_parallelogramm(
             pen,
-            dc.stroke_x * self.stroke_ratio,
-            dc.stroke_y * self.stroke_ratio,
+            self.stroke_ratio * dc.stroke_x,
             b.x2,
             ymid - h / 2,
             b.x1,
             ymid + h / 2,
-            direction="top-left"
+            direction="top-left",
         )

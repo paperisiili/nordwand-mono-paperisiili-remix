@@ -11,7 +11,7 @@ class PercentMarkGlyph(Glyph):
     offset_ratio_x = 0.45
     offset_ratio_y = 0.45
     zero_ratio = 0.4
-    slash_stroke_ratio = 1.1
+    stroke_ratio = 1.1
 
     def draw(self, pen, dc):
         b = dc.body_bounds(
@@ -22,15 +22,8 @@ class PercentMarkGlyph(Glyph):
         ox = self.offset_ratio_x * b.width
         oy = self.offset_ratio_y * b.height
 
-        draw_parallelogramm(
-            pen,
-            dc.stroke_x * self.slash_stroke_ratio,
-            dc.stroke_y * self.slash_stroke_ratio,
-            b.x1,
-            b.y1,
-            b.x2,
-            b.y2
-        )
+        s = self.stroke_ratio * dc.stroke_x
+        draw_parallelogramm(pen, s, b.x1, b.y1, b.x2, b.y2)
         draw_loop(
             pen,
             dc.stroke_alt,

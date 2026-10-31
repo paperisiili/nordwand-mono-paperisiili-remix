@@ -6,7 +6,7 @@
 # Usage:
 #   python -m generate_font --config config.example.yml
 #
-# Copy this file, edit the values you care about, and pass it with --config.
+# Copy this file, edit the values you care about, and pass it with --config. 
 
 # --- Identity ---------------------------------------------------------------
 family_name: Nordwand Mono Custom
@@ -38,8 +38,12 @@ parenthesis_length: 1060
 min_margin_lowercase: 26
 min_margin_uppercase: 38
 
+# --- Dots -------------------------------------------------------------------
+dot_exponent: 1
+dot_squash: 0
+
 # --- Italic -----------------------------------------------------------------
-italic_angle: 9.4
+italic_angle: 9
 
 # --- Body width -------------------------------------------------------------
 width: 353
@@ -78,5 +82,5 @@ stroke_alt: 71
 
 # --- Overshoots -------------------------------------------------------------
 v_overshoot: 9
-v_overshoot_cap: 16
+v_overshoot_cap: 15
 h_overshoot: 10
