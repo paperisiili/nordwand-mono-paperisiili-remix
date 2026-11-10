@@ -19,3 +19,4 @@ Remix differences:
 - Longer `,`, `` ` ``
 - A little bolder bold lowercase `m`
 - A taller `→`
+- Bigger © and ®

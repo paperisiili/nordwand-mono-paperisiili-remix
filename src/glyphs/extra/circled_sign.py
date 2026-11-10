@@ -21,10 +21,10 @@ class CircledSignGlyph(Glyph):
 
     offset = 0
     margin = 0.06  # Ring distance from the cell edges, relative to the cell width
-    ring_ratio = 0.6  # Ring stroke, relative to the regular strokes
+    ring_ratio = 0.7  # Ring stroke, relative to the regular strokes
     scale = 0.42
-    stroke_ratio = 0.6
-    y_start = 0.2
+    stroke_ratio = 0.7
+    y_start = 0
 
     def draw(self, pen, dc):
         w = dc.window_width
