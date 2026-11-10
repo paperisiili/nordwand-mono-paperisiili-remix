@@ -8,7 +8,6 @@ from draw.polygon import draw_polygon
 class Circumflex(Accent):
     name = "circumflex"
     unicode = "0x5E"
-    height = 0.35
     width = 1
     stroke_ratio = 1
     overlap = 0.5
@@ -16,14 +15,14 @@ class Circumflex(Accent):
 
     def draw(self, pen, dc):
         b = dc.body_bounds(offset=self.offset)
-        self.draw_at(pen, dc, x=b.xmid, y=b.y2, x_scale=1.3, y_scale=1.8)
+        self.draw_at(pen, dc, x=b.xmid, y=b.y2, x_scale=1.3, y_scale=2.1, stroke_scale=1.2)
 
-    def draw_at(self, pen, dc, x, y, x_scale=1, y_scale=1):
+    def draw_at(self, pen, dc, x, y, x_scale=1, y_scale=1, stroke_scale=1):
         h = self.height * dc.x_height * y_scale
         w = self.width * dc.width * x_scale
         x1, x2, xmid = x - w / 2, x + w / 2, x
         y1, y2 = y - h / 2, y + h / 2
-        s = self.stroke_ratio * dc.stroke_x
+        s = self.stroke_ratio * dc.stroke_y * stroke_scale
         ov = self.overlap * s
         ush = self.upper_section_height * dc.stroke_y
 
@@ -44,3 +43,23 @@ class Circumflex(Accent):
 class ModifierCircumflex(Circumflex):
     name = "modifier_circumflex"
     unicode = "0x2C6"
+
+
+class CircumflexBelow(Circumflex):
+    """Circumflex hanging below the baseline (Venda ḓ ḽ ṋ ṱ).
+
+    `draw_at` takes the baseline as y and hangs the accent `gap` below it.
+    """
+
+    name = "circumflexbelow"
+    unicode = None
+    generated_only = True  # Only used inside composed glyphs
+    gap = 0.12  # Relative to the x-height, as on the dot below
+
+    def draw_at(self, pen, dc, x, y):
+        h = self.height * dc.x_height
+        super().draw_at(pen, dc, x, y - self.gap * dc.x_height - h / 2)
+
+    def draw(self, pen, dc):
+        b = dc.body_bounds(offset=self.offset)
+        self.draw_at(pen, dc, x=b.xmid, y=0)

@@ -8,7 +8,6 @@ Remix differences:
 - A little narrower glyphs
 - A little narrower `_`, `=` etc.
 - Wider `-` to match `_`
-- A tiny bit lower line height
 - Wider parentheses
 - A little thicker curly braces, with slightly less peak
 - A little thicker angle brackets in the wide variant

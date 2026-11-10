@@ -1,5 +1,6 @@
 import ufoLib2
 from booleanOperations.booleanGlyph import BooleanGlyph
+from fontTools.misc.bezierTools import splitCubic
 
 from shapes.superellipse import Superellipse
 from draw.rect import draw_rect
@@ -18,7 +19,11 @@ def draw_arch(
     side="right",
     cut=None,
     taper=0.5,
+    quarter=None,
 ):
+    """Stroked superellipse thinned to `taper` on `side`. `cut` removes parts
+    of it, while `quarter` ("top-right", "top-left", "bottom-left" or
+    "bottom-right") only keeps that quarter."""
     w, h = (x2 - x1) / 2, (y2 - y1) / 2
     y_mid = y1 + h
 
@@ -40,6 +45,22 @@ def draw_arch(
         top=stroke_y if side != "top" else offset_y,
         bottom=stroke_y if side != "bottom" else offset_y,
     )
+
+    if quarter is not None:
+        # The taper moves the middle of one side of the outer and inner
+        # curves apart: align both on the middle lines of the box
+        mids = (x1 + w, y_mid)
+        outer = _align_quarter(outer_se.quarter(quarter), mids)
+        inner = _align_quarter(inner_se.quarter(quarter), mids)
+        inner = [seg[::-1] for seg in reversed(inner)]
+        pen.moveTo(outer[0][0])
+        for seg in outer + [(outer[-1][-1], inner[0][0])] + inner:
+            if len(seg) == 2:
+                pen.lineTo(seg[1])
+            else:
+                pen.curveTo(*seg[1:])
+        pen.closePath()
+        return
 
     loop_glyph = ufoLib2.objects.Glyph()
     outer_se.draw(loop_glyph.getPen(), clockwise=False)
@@ -85,3 +106,34 @@ def draw_arch(
         "outer": outer_se,
         "inner": inner_se,
     }
+
+
+def _align_quarter(seg, mids):
+    """Trim or extend a quarter of superellipse so that each end lies on
+    the middle line it is tangent to. Returns lines (2 points) and curves
+    (4 points)."""
+    p0, p1, p2, p3 = seg
+    head, tail = [], []
+
+    # Axis along the start tangent, then along the end tangent
+    a = 1 if p1[0] == p0[0] else 0
+    if abs(p0[a] - mids[a]) > 1e-6:
+        parts = splitCubic(p0, p1, p2, p3, mids[a], a == 1)
+        if len(parts) > 1:
+            p0, p1, p2, p3 = parts[-1]
+        else:
+            start = list(p0)
+            start[a] = mids[a]
+            head = [(tuple(start), p0)]
+
+    a = 1 if p2[0] == p3[0] else 0
+    if abs(p3[a] - mids[a]) > 1e-6:
+        parts = splitCubic(p0, p1, p2, p3, mids[a], a == 1)
+        if len(parts) > 1:
+            p0, p1, p2, p3 = parts[0]
+        else:
+            end = list(p3)
+            end[a] = mids[a]
+            tail = [(p3, tuple(end))]
+
+    return head + [(p0, p1, p2, p3)] + tail
